@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contato - Brincando e Aprendendo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="cursor.js" defer></script>
+  <script src="theme.js" defer></script>
+  <script src="form-validate.js" defer></script>
+  <script src="notifications.js" defer></script>
+</head>
+<body class="theme-light">
+  <header class="site-header">
+    <h1><img src="eduxon.png" alt="logo" height="100px" width="500px"></h1>
+    <button class="menu-toggle" aria-label="Abrir menu">
+      <img src="images/icons/menu.svg" alt="Menu" class="menu-icon open">
+      <img src="images/icons/close.svg" alt="Fechar" class="menu-icon close">
+    </button>
+    <div class="nav-wrapper">
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="about.html">Sobre</a>
+        <a href="games.html">Jogos</a>
+        <a href="resources.html">Recursos</a>
+        <a href="contact.html" class="active">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Fale conosco</h2>
+    <form id="contactForm">
+      <label for="cname">Nome</label>
+      <input id="cname" name="cname" required minlength="2">
+      <label for="cemail">Email</label>
+      <input id="cemail" name="cemail" type="email" required>
+      <label for="cmessage">Mensagem</label>
+      <textarea id="cmessage" name="cmessage" rows="4" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="formResult"></p>
+  </main>
+
+  <footer>
+    <p>Obrigado pelo contato.</p>
+  </footer>
+  <div id="notification-container" class="notification-container"></div>
+</body>
+</html>

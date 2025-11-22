@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Eduxon - HOME</title> 
+  <link rel="stylesheet" href="styles.css">
+  <script src="cursor.js" defer></script>
+  <script src="theme.js" defer></script>
+  <script src="confetti.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script src="sounds.js" defer></script>
+  <script src="ageFilter.js" defer></script>
+  <script src="notifications.js" defer></script>
+</head>
+<body class="theme-light">
+  <header class="site-header">
+    <h1><img src="eduxon.png" alt="logo" height="100px" width="500px"></h1>
+    <button class="menu-toggle" aria-label="Abrir menu">
+      <img src="images/icons/menu.svg" alt="Menu" class="menu-icon open">
+      <img src="images/icons/close.svg" alt="Fechar" class="menu-icon close">
+    </button>
+    <div class="nav-wrapper">
+      <nav>
+        <a href="index.html" class="active">Início</a>
+        <a href="about.html">Sobre</a>
+        <a href="games.html">Jogos</a>
+        <a href="resources.html">Recursos</a>
+        <a href="contact.html">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggle" aria-label="Alternar tema">Tema</button>
+        <button id="openLogin">Entrar</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Aprenda brincando — atividades interativas para crianças</h2>
+      <p>Conteúdos educativos, jogos simples e recursos para pais e professores.</p>
+
+      <!-- Vídeo curto estilo marketing (simulado como vídeo curto hospedado externamente). 
+           Comentário -> Trecho sugerido pela IA: linha abaixo gerada com auxílio de IA para texto do marketing. -->
+      <!-- AI_ASSISTED: O texto do trailer foi gerado com ajuda de IA. -->
+      <div class="promo-videos">
+        <video controls width="320" height="180" preload="metadata" poster="assets/video-poster1.png">
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo.
+        </video>
+        <video controls width="320" height="180" preload="metadata" poster="assets/video-poster2.png">
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo.
+        </video>
+      </div>
+      
+    </section>
+
+    <section class="features">
+      <article>
+        <img src="eduxon.png" alt="" height="50px" width="200px"  class="feature-icon">
+        <h3>Jogos Educativos</h3>
+        <p>Mini-jogos focados em alfabetização e lógica.</p>
+      </article>
+      <article>
+        <img src="eduxon.png" alt="" class="feature-icon">
+        <h3>Para Pais e Professores</h3>
+        <p>Recursos e planos de aula prontos.</p>
+      </article>
+      <article>
+        <img src="eduxon.png" alt="" class="feature-icon">
+        <h3>Segurança</h3>
+        <p>Sem tracking invasivo — apenas localStorage para preferências.</p>
+      </article>
+    </section>
+
+    <section class="interactive">
+      <h3>Experimente:</h3>
+      <div class="demo-buttons">
+        <button id="playSound">Tocar som</button>
+        <button id="ageToggle">Alternar faixa de idade</button>
+      </div>
+      <p class="note">Passe o mouse pela página para ver um efeito divertido (cursor).</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto de PWEB — entregue em HTML/CSS/JS. </p>
+    <p>Desenvolvido por: MATHEUS FELIPE DE MARTINO e NICOLAS RODRIGUES FERNANDES.</p>
+  </footer>
+
+  <!-- Modal de login (simulação de autenticação - NÃO é seguro para produção) -->
+  <div id="loginModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-content">
+      <button id="closeLogin" class="close">×</button>
+      <h2>Entrar (Simulado)</h2>
+      <form id="loginForm">
+        <label for="name">Nome:</label>
+        <input id="name" name="name" required minlength="2">
+        <label for="age">Idade:</label>
+        <input id="age" name="age" type="number" min="3" max="120" required>
+        <button type="submit">Entrar</button>
+      </form>
+      <p class="hint">Os dados ficam apenas no navegador (localStorage).</p>
+    </div>
+  </div>
+
+  <div id="notification-container" class="notification-container"></div>
+</body>
+</html>

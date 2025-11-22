@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Jogos - Brincando e Aprendendo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="cursor.js" defer></script>
+  <script src="game-memory.js" defer></script>
+  <script src="theme.js" defer></script>
+  <script src="notifications.js" defer></script>
+  <script src="confetti.js" defer></script>
+</head>
+<body class="theme-light">
+  <header class="site-header">
+    <h1><img src="eduxon.png" alt="logo" height="100px" width="500px"></h1>
+    <button class="menu-toggle" aria-label="Abrir menu">
+      <img src="images/icons/menu.svg" alt="Menu" class="menu-icon open">
+      <img src="images/icons/close.svg" alt="Fechar" class="menu-icon close">
+    </button>
+    <div class="nav-wrapper">
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="about.html">Sobre</a>
+        <a href="games.html" class="active">Jogos</a>
+        <a href="resources.html">Recursos</a>
+        <a href="contact.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Jogo da Memória (Simples)</h2>
+    <p>Clique nas cartas para encontrar pares.</p>
+    <div id="memoryBoard" class="memory-board"></div>
+    <p id="memoryStatus"></p>
+    <div class="cta">
+      <button id="celebrateBtn">Celebrar atividade!</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>Desenvolvido como atividade escolar.</p>
+  </footer>
+  <div id="notification-container" class="notification-container"></div>
+</body>
+</html>
